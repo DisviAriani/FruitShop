@@ -80,29 +80,33 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 7%;
-  margin-bottom: -7rem;
+  gap: 5rem;
+  padding: 5rem 8%;
+}
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-image img {
-  width: 100%;
+  width: 110%;
   filter: drop-shadow(20px 30px 10px rgba(0, 0, 0, 0.1));
 }
 .home-text h1 {
-  font-size: 7rem;
+  font-size: 8rem;
 }
 .home-text h1 span {
   color: #ff9c01;
 }
 .home-text h4 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #303030;
   padding-bottom: 1.5rem;
 }
 .home-text p {
   color: #6a6a6a;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding-bottom: 3rem;
 }
 .home-text .btn {
@@ -124,6 +128,96 @@ nav a:hover {
 }
 .home-text .btn:hover {
   transform: translateY(-8px);
+  background: #ff9c01;
+}
+/* Services Section */
+.services-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  padding: 4rem 5%;
+  grid-gap: 3rem;
+  align-content: center;
+  background-color: #ff9c01;
+}
+.s-box {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.s-box img {
+  width: 70px;
+}
+.s-box h3 {
+  margin: 1rem;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #dd0028;
+}
+.s-box p {
+  font-size: 1.3rem;
+  color: #faf9f9;
+}
+/* About Section */
+.about {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 5%;
+}
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img {
+  width: 450px;
+  height: auto;
+}
+.about-text h5 {
+  color: #ff9c01;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-left: 0.5rem;
+}
+
+.about-text h2 {
+  font-size: 4rem;
+  margin-top: 3rem;
+}
+.about-text h2 span {
+  color: #dd0028;
+}
+.about-text p {
+  color: #303030;
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+  text-align: justify;
+  margin-top: 1rem;
+  padding-right: 4rem;
+}
+.about-text .btn {
+  display: flex;
+  width: 13rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 1rem;
+  background-color: #dd0028;
+  border-radius: 1rem;
+  gap: 5px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  transition: all 0.6s;
+}
+.about-text .btn i {
+  font-size: 3rem;
+}
+.about-text .btn:hover {
+  transform: translateY(8px);
   background: #ff9c01;
 }
 
@@ -156,13 +250,41 @@ nav a:hover {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1115px) {
+  .services-container {
+    gap: 0.1rem;
+  }
+  .s-box {
+    padding: 2rem;
+  }
+  .s-box h3 {
+    font-size: 1.5rem;
+  }
+  .about-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .home-text h1 {
+    font-size: 6rem;
+  }
+  .home-text h4 {
+    font-size: 2rem;
+  }
+  .home-text p {
+    font-size: 1.1rem;
+  }
+}
 @media screen and (max-width: 968px) {
   #icon-list {
     display: initial;
   }
   header {
-    padding: 0.5rem 7%;
+    padding: 2rem 7%;
   }
+  header .logo {
+    font-size: 2rem;
+  }
+
   nav {
     position: absolute;
     width: 200px;
@@ -189,16 +311,47 @@ nav a:hover {
     margin: 0.8rem;
     padding: 0.8rem;
   }
+  .home-text {
+    margin-bottom: -3rem;
+  }
+  .about {
+    padding: 4rem 3%;
+  }
+  .about-text h2 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+  .s-box {
+    padding: 5rem;
+  }
+  .s-box h3 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  header img {
+    width: 20px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  .icon i {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
   .home {
     height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    padding: 10rem 7% 3rem 7%;
+    padding: 15rem 10% 3rem 10%;
     align-items: center;
-  }
-  .home-text {
-    margin-bottom: -3rem;
   }
   .home-text h1 {
     font-size: 7rem;
@@ -209,43 +362,49 @@ nav a:hover {
   .home-text p {
     font-size: 1.5rem;
   }
-}
-@media screen and (max-width: 580px) {
-  header {
-    padding: 0.5rem 7%;
-  }
-  header .logo {
-    font-size: 1.5rem;
-  }
-  header img {
-    width: 20px;
-    height: auto;
-    margin-right: 0.5rem;
-  }
-  .icon i {
-    font-size: 1.5rem;
-    margin: 0.5rem;
-  }
-
-  .home-text h1 {
-    font-size: 5rem;
-  }
-  .home-text h4 {
-    font-size: 1.5rem;
-  }
-  .home-text p {
-    font-size: 1rem;
-  }
   .home-text .btn {
-    width: 10rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .home-text .btn i {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .home-image img {
+    width: 70%;
+
     padding-bottom: 2rem;
   }
+
+  .about {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    padding: 5rem 10% 3rem 10%;
+  }
+  .about-img img {
+    width: 400px;
+  }
+  .about-text h5 {
+    font-size: 2rem;
+    color: #ff9c01;
+    font-weight: 900;
+  }
+
+  .about-text h2 {
+    font-size: 4rem;
+  }
+  .about-text p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  .about-text .btn {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2em;
+  }
+
   .footer p {
     font-size: 0.8rem;
     font-weight: 700;
@@ -254,14 +413,32 @@ nav a:hover {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 376px) {
-  .home-text h1 {
-    font-size: 4rem;
-  }
-  .home-text h4 {
-    font-size: 1.2rem;
-  }
 
+@media screen and (max-width: 785px) {
+  .about-text h2 {
+    font-size: 3rem;
+  }
+  .about-text p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  .about-text .btn {
+    font-size: 1.5rem;
+    width: 15rem;
+  }
+  .about-text .btn i {
+    font-size: 1.5rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+  .s-box {
+    padding: 3rem;
+  }
+  .s-box h3 {
+    font-size: 1.5rem;
+  }
   .footer {
     padding: 3rem 7% 1rem 7%;
   }
@@ -270,5 +447,41 @@ nav a:hover {
   }
   .footer .socials a i {
     margin: 0.3rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+}
+@media screen and (max-width: 555px) {
+  .home-text h1 {
+    font-size: 5rem;
+  }
+  .home-text h4 {
+    font-size: 2rem;
+  }
+  .home-text p {
+    font-size: 1rem;
+  }
+  .about-img img {
+    width: 300px;
+  }
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+  .about-text p {
+    font-size: 1rem;
+    padding: 0rem 0rem;
+  }
+  .s-box {
+    padding: 2rem;
+  }
+
+  .s-box h3 {
+    font-size: 1.2rem;
+  }
+  .s-box p {
+    font-size: 1rem;
   }
 }
