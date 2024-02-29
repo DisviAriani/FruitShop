@@ -81,7 +81,7 @@ nav a:hover {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 5rem;
-  padding: 5rem 8%;
+  padding: 8rem 8%;
 }
 .home-image {
   display: flex;
@@ -89,7 +89,7 @@ nav a:hover {
   align-items: center;
 }
 .home-image img {
-  width: 110%;
+  width: 100%;
   filter: drop-shadow(20px 30px 10px rgba(0, 0, 0, 0.1));
 }
 .home-text h1 {
@@ -130,43 +130,58 @@ nav a:hover {
   transform: translateY(-8px);
   background: #ff9c01;
 }
+
 /* Services Section */
-.services-container {
-  display: grid;
+.service-container {
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  padding: 4rem 5%;
+  padding: 2rem 5%;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 3rem;
-  align-content: center;
-  background-color: #ff9c01;
+  margin: 5rem 0;
 }
 .s-box {
-  justify-content: center;
   text-align: center;
-  align-items: center;
+  padding: 25px 10px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
 }
-.s-box img {
-  width: 70px;
-}
-.s-box h3 {
-  margin: 1rem;
-  font-weight: 900;
-  font-size: 2rem;
+.s-box i {
+  font-size: 5rem;
   color: #dd0028;
 }
+.s-box h2 {
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
 .s-box p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+.s-box:hover {
+  background: #ff9c01;
+  color: #faf9f9;
+  transform: scale(1.05);
+}
+.s-box:hover i {
   color: #faf9f9;
 }
+
 /* About Section */
 .about {
+  padding: 2rem 5%;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1rem;
-  padding: 4rem 5%;
+  background-color: #ffae2c;
 }
 .about-img {
   display: flex;
@@ -178,22 +193,22 @@ nav a:hover {
   height: auto;
 }
 .about-text h5 {
-  color: #ff9c01;
+  color: #dd0028;
   font-size: 2.5rem;
   font-weight: 800;
   margin-left: 0.5rem;
 }
-
 .about-text h2 {
   font-size: 4rem;
   margin-top: 3rem;
 }
 .about-text h2 span {
-  color: #dd0028;
+  color: #ffffff;
 }
 .about-text p {
-  color: #303030;
+  color: #0c0c0c;
   font-size: 1.3rem;
+  font-weight: 800;
   padding-bottom: 3rem;
   text-align: justify;
   margin-top: 1rem;
@@ -218,52 +233,266 @@ nav a:hover {
 }
 .about-text .btn:hover {
   transform: translateY(8px);
+  background: #303030;
+}
+
+/* Products Section */
+.products {
+  padding: 3rem 8% 8rem 8%;
+}
+.product-text {
+  text-align: center;
+}
+.product-text h5 {
+  font-size: 2rem;
+  color: #ff9c01;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.product-text h2 {
+  font-size: 4rem;
+}
+.product-text h2 span {
+  color: #dd0028;
+}
+.products .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.products .products-container .box {
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  background-color: #faf9f9;
+  box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+  border-radius: 0.5rem;
+  outline: 2px solid #faf9f9;
+  transition: outline 2s ease 0s;
+}
+.products .products-container .box:hover {
+  outline: 3px solid #dd0028;
+}
+.box-text {
+  text-align: start;
+}
+.products .products-container .box img {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.products-container .box h6 {
+  font-weight: 800;
+  font-size: 13px;
+  color: #ff9c01;
+}
+.products-container .box h2 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.products-container .box h5 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.products-container .box .price {
+  font-size: 1.8rem;
+  color: #dd0028;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.products-container .box .ph-shopping-cart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #dd0028;
+  color: #faf9f9;
+  font-size: 2rem;
+  border-radius: 0.5rem 0;
+  cursor: pointer;
+}
+.products-container .box .ph-shopping-cart:hover {
+  background-color: #ff9c01;
+  transition: 0.2s all linear;
+}
+.products-container .box .ph-heart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #dd0028;
+}
+.products-container .box .ph-heart:hover {
+  color: #ff9c01;
+  transition: 0.2s all linear;
+}
+.products-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 0;
   background: #ff9c01;
+  color: #faf9f9;
+  padding: 3px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  clip-path: polygon(100% 0%, 80% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+
+/* Reviews Section */
+.review {
+  padding: 4rem 8% 8rem 8%;
+  background: #ff9c01;
+  width: 100%;
+  height: auto;
+  background-color: #ffae2c;
+}
+.review-text {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.review-text h5 {
+  font-size: 2rem;
+  color: #dd0028;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.review-text h2 {
+  font-size: 3.5rem;
+}
+.review-text h2 span {
+  color: #faf9f9;
+}
+.review-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 3rem;
+  align-items: center;
+}
+.r-box {
+  padding: 30px;
+  background-color: #faf9f9;
+  box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+  border-radius: 2rem;
+  transition: transform 0.5s, background 0.5s;
+}
+.r-box:hover {
+  transform: scale(1.05);
+}
+.r-box p {
+  color: #0c0c0c;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.8px;
+}
+.in-box {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.rbox-img img {
+  width: 60px;
+  height: 60px auto;
+  border-radius: 50%;
+  border: 3px solid #ff9c01;
+}
+.rbox-text h4 {
+  margin: 5px 0;
+  font-size: 15px;
+}
+.rbox-text h5 {
+  color: #6a6a6a;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+.ratings i {
+  color: #ff9c01;
+  font-size: 1.5rem;
+  margin-right: 4px;
 }
 
 /* Footer section */
 .footer {
-  padding: 2rem 7% 1rem 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  padding: 4rem 8%;
+  background-color: #faf9f9;
 }
-.footer .logo {
-  color: #dd0028;
-  font-size: 1.5rem;
-  font-weight: 700;
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
-.footer .logo span {
+.footer .box-container .f-box .logo span {
   color: #ff9c01;
 }
-.footer p {
-  font-size: 1rem;
+.footer .box-container .f-box .logo img {
+  margin-right: 1rem;
+}
+.footer .box-container .f-box h3 {
+  font-size: 2rem;
+  color: #dd0028;
+  padding: 1rem 0;
+}
+.footer .box-container .f-box .links {
+  display: block;
+  font-size: 1.3rem;
+  color: #0c0c0c;
+  padding: 0.5rem 0;
+}
+.footer .box-container .f-box p {
+  font-size: 1.2rem;
+  color: #0c0c0c;
+  padding: 0.8rem 5rem 3rem 0;
+}
+.footer .box-container .f-box .links i {
+  color: #dd0028;
+
+  padding-right: 0.5rem;
+}
+.footer .box-container .f-box .links:hover {
+  color: #ff9c01;
+  font-weight: 800;
+  padding-right: 2rem;
 }
 .footer .socials a i {
-  margin: 1rem;
   color: #dd0028;
   font-size: 2rem;
+  margin-right: 2rem;
 }
 .footer .socials a i:hover {
   color: #ff9c01;
 }
+.copyright {
+  text-align: center;
+  padding: 2rem;
+  font-weight: 800;
+  background-color: #faf9f9;
+  box-shadow: 1px 2px 10px 4px rgb(14 55 54 / 15%);
+}
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1150px) {
+  .review-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+}
 @media screen and (max-width: 1115px) {
-  .services-container {
-    gap: 0.1rem;
-  }
   .s-box {
-    padding: 2rem;
+    padding: 20px 5px;
+    font-size: 1.2rem;
   }
-  .s-box h3 {
-    font-size: 1.5rem;
+  .row {
+    grid-gap: 2rem;
   }
-  .about-text h2 {
-    font-size: 3.5rem;
+  .s-box p {
+    font-size: 1rem;
   }
-
+  .about-text h2,
+  .review-text h2 {
+    font-size: 3rem;
+  }
   .home-text h1 {
     font-size: 6rem;
   }
@@ -271,7 +500,10 @@ nav a:hover {
     font-size: 2rem;
   }
   .home-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+  .r-box {
+    padding: 20px;
   }
 }
 @media screen and (max-width: 968px) {
@@ -279,12 +511,11 @@ nav a:hover {
     display: initial;
   }
   header {
-    padding: 2rem 7%;
+    padding: 0.8rem 7%;
   }
   header .logo {
     font-size: 2rem;
   }
-
   nav {
     position: absolute;
     width: 200px;
@@ -317,24 +548,26 @@ nav a:hover {
   .about {
     padding: 4rem 3%;
   }
-  .about-text h2 {
+  .about-text h2,
+  .review-text h2 {
     font-size: 3rem;
     margin-top: 2rem;
   }
   .about-text p {
     font-size: 1rem;
   }
-  .services-container {
+  .products .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .review-content {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   }
-  .s-box {
-    padding: 5rem;
-  }
-  .s-box h3 {
-    font-size: 2rem;
-  }
 }
-
 @media screen and (max-width: 868px) {
   header img {
     width: 20px;
@@ -350,7 +583,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    padding: 15rem 10% 3rem 10%;
+    padding: 10rem 10% 3rem 10%;
     align-items: center;
   }
   .home-text h1 {
@@ -370,26 +603,23 @@ nav a:hover {
   }
   .home-image img {
     width: 70%;
-
     padding-bottom: 2rem;
   }
-
   .about {
     height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
-    padding: 5rem 10% 3rem 10%;
+    padding: 1rem 10% 4rem 10%;
   }
   .about-img img {
     width: 400px;
   }
-  .about-text h5 {
+  .about-text h5,
+  .review-text h5 {
     font-size: 2rem;
-    color: #ff9c01;
     font-weight: 900;
   }
-
   .about-text h2 {
     font-size: 4rem;
   }
@@ -404,7 +634,26 @@ nav a:hover {
     align-items: center;
     font-size: 1.2em;
   }
-
+  .product-text h5 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .product-text h2 {
+    font-size: 4rem;
+  }
+  .products-container .box h2 {
+    font-size: 1.7rem;
+  }
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .s-box {
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  .s-box p {
+    font-size: 1.4rem;
+  }
   .footer p {
     font-size: 0.8rem;
     font-weight: 700;
@@ -413,7 +662,6 @@ nav a:hover {
     font-size: 1.5rem;
   }
 }
-
 @media screen and (max-width: 785px) {
   .about-text h2 {
     font-size: 3rem;
@@ -430,14 +678,17 @@ nav a:hover {
   .about-text .btn i {
     font-size: 1.5rem;
   }
-  .services-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  .product-text h2 {
+    font-size: 3rem;
   }
-  .s-box {
-    padding: 3rem;
+  .products-container .box h2 {
+    font-size: 1.7rem;
   }
-  .s-box h3 {
-    font-size: 1.5rem;
+  .products .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .footer {
     padding: 3rem 7% 1rem 7%;
@@ -449,12 +700,19 @@ nav a:hover {
     margin: 0.3rem;
   }
 }
-@media screen and (max-width: 700px) {
-  .services-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+@media screen and (max-width: 690px) {
+  .row {
+    margin: 3rem 8rem;
+  }
+  .s-box {
+    padding: 20px 40px;
+    font-size: 1.8rem;
+  }
+  .s-box i {
+    font-size: 7rem;
   }
 }
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 580px) {
   .home-text h1 {
     font-size: 5rem;
   }
@@ -462,7 +720,7 @@ nav a:hover {
     font-size: 2rem;
   }
   .home-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .about-img img {
     width: 300px;
@@ -474,14 +732,37 @@ nav a:hover {
     font-size: 1rem;
     padding: 0rem 0rem;
   }
+  .products {
+    padding: 4rem 10%;
+  }
+  .products .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .product-text h2 {
+    font-size: 2.5rem;
+  }
+  .products-container .box h2 {
+    font-size: 2rem;
+  }
+  .products .products-container .box img {
+    width: 60%;
+  }
+  .row {
+    margin: 5rem;
+  }
   .s-box {
-    padding: 2rem;
+    padding: 10px 20px;
+    font-size: 1.4rem;
   }
-
-  .s-box h3 {
-    font-size: 1.2rem;
+  .review-text h5 {
+    font-size: 1.5rem;
   }
-  .s-box p {
+  .review-text h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 412px) {
+  .home-text p {
     font-size: 1rem;
   }
 }
