@@ -602,8 +602,7 @@ nav a:hover {
     font-size: 2rem;
   }
   .home-image img {
-    width: 70%;
-    padding-bottom: 2rem;
+    width: 100%;
   }
   .about {
     height: auto;
@@ -669,11 +668,11 @@ nav a:hover {
   .about-text p {
     font-size: 1.2rem;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
   }
   .about-text .btn {
-    font-size: 1.5rem;
-    width: 15rem;
+    font-size: 1.2rem;
+    width: 13rem;
   }
   .about-text .btn i {
     font-size: 1.5rem;
@@ -701,9 +700,6 @@ nav a:hover {
   }
 }
 @media screen and (max-width: 690px) {
-  .row {
-    margin: 3rem 8rem;
-  }
   .s-box {
     padding: 20px 40px;
     font-size: 1.8rem;
@@ -714,23 +710,22 @@ nav a:hover {
 }
 @media screen and (max-width: 580px) {
   .home-text h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .home-text h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .home-text p {
     font-size: 1.2rem;
   }
   .about-img img {
-    width: 300px;
+    width: 250px;
   }
   .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .about-text p {
-    font-size: 1rem;
-    padding: 0rem 0rem;
+    font-size: 0.8rem;
   }
   .products {
     padding: 4rem 10%;
@@ -747,9 +742,7 @@ nav a:hover {
   .products .products-container .box img {
     width: 60%;
   }
-  .row {
-    margin: 5rem;
-  }
+
   .s-box {
     padding: 10px 20px;
     font-size: 1.4rem;
@@ -763,6 +756,6 @@ nav a:hover {
 }
 @media screen and (max-width: 412px) {
   .home-text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
